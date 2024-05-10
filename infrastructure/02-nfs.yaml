@@ -6,11 +6,11 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: system-utils
+  project: infrastructure
   source:
     repoURL: 'https://github.com/rcbest/kubernetes2.git'
     path: infrastructure/01-clusterapp/01-nfs
-    targetRevision: master
+    targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: nfs-client
